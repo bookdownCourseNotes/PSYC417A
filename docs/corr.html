@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Review of Pearson correlation | Applied regression analysis</title>
+  <meta name="description" content="Notes for Andrew’s PSYC 417A - applied multiple regression, in the form of a bookdown book" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Review of Pearson correlation | Applied regression analysis" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Notes for Andrew’s PSYC 417A - applied multiple regression, in the form of a bookdown book" />
+  <meta name="github-repo" content="bookdownCourseNote/PSYC417A" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Review of Pearson correlation | Applied regression analysis" />
+  
+  <meta name="twitter:description" content="Notes for Andrew’s PSYC 417A - applied multiple regression, in the form of a bookdown book" />
+  
+
+<meta name="author" content="Andrew Li" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="factors.html"/>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Applied regression analysis</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preamble</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#caution"><i class="fa fa-check"></i><b>1.1</b> Caution</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i><b>1.2</b> Acknowledgments</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#course-goals"><i class="fa fa-check"></i><b>1.3</b> Course goals</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#readings"><i class="fa fa-check"></i><b>1.4</b> Readings</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#course-content"><i class="fa fa-check"></i><b>1.5</b> Course content</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="corr.html"><a href="corr.html"><i class="fa fa-check"></i><b>2</b> Review of Pearson correlation</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="corr.html"><a href="corr.html#consider-two-variables-separately"><i class="fa fa-check"></i><b>2.1</b> Consider two variables separately</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="corr.html"><a href="corr.html#descriptive-statistics"><i class="fa fa-check"></i><b>2.1.1</b> Descriptive statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="corr.html"><a href="corr.html#relationnship-between-two-variables"><i class="fa fa-check"></i><b>2.2</b> Relationnship between two variables</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="corr.html"><a href="corr.html#graphical-representation"><i class="fa fa-check"></i><b>2.2.1</b> Graphical representation</a></li>
+<li class="chapter" data-level="2.2.2" data-path="corr.html"><a href="corr.html#covariance"><i class="fa fa-check"></i><b>2.2.2</b> Covariance</a></li>
+<li class="chapter" data-level="2.2.3" data-path="corr.html"><a href="corr.html#pearson-correlation-coefficient"><i class="fa fa-check"></i><b>2.2.3</b> Pearson correlation coefficient</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="corr.html"><a href="corr.html#interpreting-a-pearson-correlation"><i class="fa fa-check"></i><b>2.3</b> Interpreting a Pearson correlation</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="factors.html"><a href="factors.html"><i class="fa fa-check"></i><b>3</b> Factors affecting correlation coefficients</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="factors.html"><a href="factors.html#overview"><i class="fa fa-check"></i><b>3.1</b> Overview</a></li>
+<li class="chapter" data-level="3.2" data-path="factors.html"><a href="factors.html#restriction-of-range"><i class="fa fa-check"></i><b>3.2</b> Restriction of range</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="factors.html"><a href="factors.html#correction-for-restriction-of-range"><i class="fa fa-check"></i><b>3.2.1</b> Correction for restriction of range</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="factors.html"><a href="factors.html#outliers"><i class="fa fa-check"></i><b>3.3</b> Outliers</a></li>
+<li class="chapter" data-level="3.4" data-path="factors.html"><a href="factors.html#nonlinearity"><i class="fa fa-check"></i><b>3.4</b> Nonlinearity</a></li>
+<li class="chapter" data-level="3.5" data-path="factors.html"><a href="factors.html#dichotomization"><i class="fa fa-check"></i><b>3.5</b> Dichotomization</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
+<li class="chapter" data-level="5" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>5</b> Applications</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one</a></li>
+<li class="chapter" data-level="5.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>5.2</b> Example two</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>6</b> Final Words</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Applied regression analysis</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="corr" class="section level1" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Review of Pearson correlation</h1>
+<div id="consider-two-variables-separately" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Consider two variables separately</h2>
+<ul>
+<li>Suppose you are given two variables, <span class="math inline">\(X_1\)</span> and <span class="math inline">\(Y\)</span></li>
+<li>Each measured on an <em>interval</em> or <em>ratio</em> scale (for now).
+<ul>
+<li><strong>Interval scale:</strong> equal intervals between scale points but has an arbitrary 0; permits +, - operations; An example would be the SAT score.
+<ul>
+<li>For example, we can add/subtract in a meaningful way but it doesn’t make sense to multiple or divide SAT score because it assumes the 0 would be meaningful (the lowest possible SAT score is 400).</li>
+</ul></li>
+<li><strong>Ratio scale:</strong> equal intervals and a true 0 (which denotes absnce of construct); permits +, -, *, / operations; for example: Age.
+<ul>
+<li>Multiplying and dividing makes sense in this case because a 4 year old is twice as old as a two year old.</li>
+</ul></li>
+</ul></li>
+<li>With a sample size of <span class="math inline">\(n\)</span></li>
+<li>Scores for individual <span class="math inline">\(i\)</span> are <span class="math inline">\(X_{1i}\)</span> and <span class="math inline">\(Y_i\)</span>.</li>
+</ul>
+<p><strong>Example data set:</strong></p>
+<ul>
+<li><span class="math inline">\(X_1\)</span> is the average monthly temperature baby first tries tto crawl (F)</li>
+<li><span class="math inline">\(Y\)</span> is baby’s age of first crawl (in weeks)</li>
+<li><span class="math inline">\(n = 12\)</span></li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>observation</th>
+<th><span class="math inline">\(X_1\)</span> (temp)</th>
+<th><span class="math inline">\(Y\)</span> (weeks)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>66</td>
+<td>29.84</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>73</td>
+<td>30.52</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>72</td>
+<td>29.7</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>63</td>
+<td>31.84</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>52</td>
+<td>28.58</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>39</td>
+<td>31.44</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>33</td>
+<td>33.64</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>30</td>
+<td>32.82</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>33</td>
+<td>33.83</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>37</td>
+<td>33.355</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>48</td>
+<td>33.38</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>57</td>
+<td>32.32</td>
+</tr>
+</tbody>
+</table>
+<div id="descriptive-statistics" class="section level3" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Descriptive statistics</h3>
+<p>First, we consider the variables separately, looking at descriptive statistics for each variable. <br>
+<strong>Note:</strong> When estimating a piopulation quantity, use <span class="math inline">\(n-1\)</span> to account for the loss of 1 degree freedom.</p>
+<p>Mean:
+<span class="math display">\[
+\bar{X_1} = \frac{\sum{X_{1i}}}{n}
+= 50.25
+\\
+\bar{Y_1} = \frac{\sum{Y_{i}}}{n}
+= 31.77
+\]</span>
+Variance (unbiased):
+<span class="math display">\[
+sd_{1}^2 = \frac{\sum{(X_{1i} - \bar{X_1})^2}}{n-1} = 251.11
+\\
+sd_{Y}^2 = \frac{\sum{(Y_{i} - \bar{Y})^2}}{n-1} = 3.10
+\]</span></p>
+<p>Variance (biased):
+<span class="math display">\[
+SD_{1}^2 = \frac{\sum{(X_{1i} - \bar{X_1})^2}}{n} = 230.19
+\\
+SD_{Y}^2 = \frac{\sum{(Y_{i} - \bar{Y})^2}}{n} = 2.84
+\]</span></p>
+<p>Standard deviation:
+<span class="math display">\[
+sd_1 = \sqrt{sd_{1}^2} = 15.85
+\\
+sd_Y = \sqrt{sd_{Y}^2} = 1.76
+\\
+SD_1 = \sqrt{SD_{1}^2} = 15.17
+\\
+SD_Y = \sqrt{SD_{Y}^2} = 1.69
+\]</span></p>
+</div>
+</div>
+<div id="relationnship-between-two-variables" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Relationnship between two variables</h2>
+<p>Now, let’s consider the relationship <em>between</em> the two variables. The <strong>hypothesis</strong> is that infants take longer to learn to crawl in cold weather.</p>
+<div id="graphical-representation" class="section level3" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Graphical representation</h3>
+<p>We can graphically represent the relationship between two variables using a scatterlot. In a scatterplot, each axis represents one variable. Each observations are represented as points in space, with coordinates of pint corresponding to scores on <span class="math inline">\(X_1\)</span> and <span class="math inline">\(Y\)</span>. Here we are focusing on linear relationships. Scatterlot can provide some informal/qualitative information about the presences of a linear relationship.</p>
+<p><img src="Applied-regression-analysis_files/figure-html/unnamed-chunk-3-1.png" width="384" /></p>
+<p>However, it would be convenient to also have a <em>quantitative</em> measure summarizing the degree or strength of the linear relationship.</p>
+</div>
+<div id="covariance" class="section level3" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> Covariance</h3>
+<p>One possible quantitative measure of linear association we could use is <strong>covariance</strong>.
+* Covariance between <span class="math inline">\(X-1\)</span> and <span class="math inline">\(Y\)</span>:
+<span class="math display">\[
+c_{Y1} = \frac{\sum{(X_{1i} - \bar{X_1})(Y_{i} - \bar{Y})}}{n-1} = -19.53
+\]</span></p>
+<ul>
+<li>However, the covariance is <em>not</em> independent of the scales of <span class="math inline">\(X_1\)</span> and <span class="math inline">\(Y\)</span>. Thus, its magnitude as affected by both the strength of linear relationship <em>and</em> the scales of the variables.
+<ul>
+<li>So if <span class="math inline">\(Y\)</span> has variance of 1,000,000 and <span class="math inline">\(X_1\)</span> has a variance of10, it is hard to know what covariance means because of the different scales</li>
+</ul></li>
+<li>Consequently, the covariance is <em>not</em> bounded by -1 and +1.</li>
+</ul>
+</div>
+<div id="pearson-correlation-coefficient" class="section level3" number="2.2.3">
+<h3><span class="header-section-number">2.2.3</span> Pearson correlation coefficient</h3>
+<p>So we would like a quantitative measure summarizing the degree or strength of the linear relationship. <em>And</em> we would like that measure to <em>not</em> change with ann arbitrary change in units of the variables…</p>
+<p>We can eliminate scale issues for <span class="math inline">\(X_1\)</span> and <span class="math inline">\(Y\)</span> by dividing by the standard deviations of both variables, yielding the <strong>Peaarson correlation coefficient:</strong>
+<span class="math display">\[
+r_{Y1} = \frac{\sum{(X_{1i} - \bar{X_1})(Y_{i} - \bar{Y})}}{(n-1)sd_{1}sd_{Y}}
+\]</span></p>
+<p>or, equivalently (<span class="math inline">\(c_{Y1}\)</span>) was defined as the covariance:
+<span class="math display">\[
+r_{Y1} = \frac{c_{Y1}}{sd_{1}sd_{Y}}
+\]</span></p>
+<ul>
+<li><p>The correlation is independent of scales of measurements because it uses standardized scores(<span class="math inline">\(z_1\)</span> and <span class="math inline">\(z_Y\)</span>) which are not altered by linear transformation of raw scores (<span class="math inline">\(X_1\)</span> and <span class="math inline">\(Y\)</span>).
+<span class="math display">\[
+r_{Y1} = \frac{\sum{(X_{1i} - \bar{X_1})(Y_{i} - \bar{Y})}}{(n-1)sd_{1}sd_{Y}} \\
+= r_{Y1} = \frac{\sum{z_{1i}z_{Yi}}}{n -1}
+\]</span></p></li>
+<li><p>where <span class="math inline">\(z_{1i}\)</span> and <span class="math inline">\(z_{Yi}\)</span> are standardized scores (z-scores).
+<span class="math display">\[
+z_{1i} = \frac{(X_{1i} - \bar{X_1})}{sd_1} \\
+z_{Yi} = \frac{(Y_{i} - \bar{Y})}{sd_Y}
+\]</span></p></li>
+<li><p>Properties of standardized scores (z-scores)</p>
+<ul>
+<li>Means are equal to 0</li>
+<li>Variance always equal to 1</li>
+</ul></li>
+<li><p>You can find the standardized score in R usinf the <code>scale()</code> function:</p></li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="corr.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scale</span>(data_crawl<span class="sc">$</span>temp)</span></code></pre></div>
+<ul>
+<li>Standardized sscores(z-scores) represent relative standing with respect to the mean.</li>
+<li>Standardizing varibales does not change the ranking of scores
+<ul>
+<li>As you can see from the table below, the rank of z-scores are the same as the rank of raw scores.</li>
+<li>Raw scores that were above/below the mean corresponds with z-scores above/below 0.</li>
+</ul></li>
+</ul>
+<pre><code>##   temp weeks        Z_1         Z_y       z1_zy
+## 1   66 29.84  0.9807934 -1.09717461 -1.07610160
+## 2   73 30.52  1.4190202 -0.71093886 -1.00883661
+## 3   73 29.70  1.4190202 -1.17669374 -1.66975220
+## 4   63 31.84  0.7929819  0.03881291  0.03077793
+## 5   52 28.58  0.1043397 -1.81284675 -0.18915193
+## 6   39 31.44 -0.7095101 -0.18838460  0.13366078</code></pre>
+<ul>
+<li><p>As well, points in standardized scores scatterplot retain the same relation to each other as in raw scores scatterplot. The underlying relationship remains the same.
+<img src="Applied-regression-analysis_files/figure-html/unnamed-chunk-6-1.png" width="576" /></p></li>
+<li><p>Now let’s calculate the Pearson correlation using the <code>data_crawl$z1_zy</code> column.
+<span class="math display">\[
+r_{Y1} = \frac{\sum{z_{1i}z_{Yi}}}{n -1} = \frac{-7.71}{11} = -.70
+\]</span></p></li>
+<li><p>Let us consider how this measure behaves under different relationships of variables:</p>
+<ul>
+<li>Negative relationships: multiplying (+)(-) scores yields a negative sum of products
+<ul>
+<li>On average, being positive on x meant they were negative on y , meaning that we can expect a lot of negative values in the sum of products, thus resulting in a negative correlation.</li>
+</ul></li>
+<li>Positive relationship: multiplying (+)(+) or (-)(-) yields a positive sum of products</li>
+<li>Zero relationship: yields zero sum of products</li>
+</ul></li>
+<li><p>correlations are bounded by +1 (perfect positive correlation) and -1 (perfect negative relationship) because the variance of a standardized variable is 1/-1.</p></li>
+</ul>
+</div>
+</div>
+<div id="interpreting-a-pearson-correlation" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Interpreting a Pearson correlation</h2>
+<ul>
+<li><strong>Magnitude</strong>: measures strength of linear relationship (larger absolute values are stronger)</li>
+<li><strong>Sign</strong> indicates direction of linear relationship</li>
+<li><strong>Independent of scales</strong> of measurement
+<ul>
+<li>This is because standardized scores (<span class="math inline">\(z_1\)</span> and <span class="math inline">\(Z_Y\)</span>) are noot alterated by linear transfoormatino of raw scores (<span class="math inline">\(X_1\)</span> and <span class="math inline">\(Y\)</span>)</li>
+</ul></li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="factors.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/01-pearson_correlatino.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Applied-regression-analysis.pdf", "Applied-regression-analysis.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

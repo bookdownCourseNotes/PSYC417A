@@ -1,0 +1,49 @@
+--- 
+title: "Applied regression analysis"
+author: "Andrew Li"
+date: "Spring 2021"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: bookdownCourseNote/PSYC417A
+description: "Notes for Andrew's PSYC 417A - applied multiple regression, in the form of a bookdown book"
+---
+
+# Preamble
+
+## Caution
+**This book was made for studying purposes only.** I will be adding notes from other sources and I may leave out some topics from the course. Also, I will not be purchasing or reading the supplemental text. As such, this is not a faithful representation of the course. 
+
+## Acknowledgments
+This course was taught by [Dr. Jason Rights](https://psych.ubc.ca/profile/jason-rights/)! 
+
+## Course goals
+There are three primary goals of this course. The first goal is to provide students with sound foundational knowledge in the theory and concepts of linear regression analysis. The second goal is to develop an ability to properly apply regression methods to empirical data, including making informed decisions about analytic strategies and understanding how to report results. The third goal is to be able to critically evaluate the use of linear regression methods in research literature and the news. This course requires the successful completion of PSYC 218.
+
+## Readings
+* Supplemental textbook (not required): Cohen, J., Cohen, P., West, S. G., & Aiken, L. S. (2003). *Applied multiple regression/correlation analysis for the behavioral sciences.* (3rd edition). Hillsdale, NJ: Erlbaum.
+
+## Course content
+**Note:** Bolded weeks indicates that a problem set is due or there is a midterm. 
+
+| Week   | Date (2021) | Lecture topics                                                                                   | Readings                                     | HW/MT |
+|--------|-------------|--------------------------------------------------------------------------------------------------|----------------------------------------------|-------|
+| 1      | 1/11 - 1/15 | 1. Orientation; Review of the Pearson correlation<br>2. Factor affecting the size of correlation | 1. (Ch. 1, 2.1 - 2.2) <br>2. (Ch. 2.3: 2.10) | none  |
+| 2      | 1/18 - 1/22 | 1. Simple linear regression <br>2. Inferences for SLR                                            | 1. (Ch. 2.4 - 2.7) <br>2. (Ch. 2.8)          | none  |
+| **3**  | 1/25 - 1/29 | 1. Multiple linear regression (MLR) with 2 IVs                                                   | (Ch. 3.1 - 3.2)                              | HW 1  |
+| 4      | 2/1 - 2/5   | 1. MLR with k IVs                                                                                | (Ch. 3.5)                                    | none  |
+| **5**  | 2/8 - 2/12  | *Lecture catch-up*                                                                               | none                                         | MT1   |
+| 6      | 2/15 - 2/19 | *Spring Break*                                                                                   | none                                         | none  |
+| **7**  | 2/22 - 2/26 | 1. Power analysis for MLR <br>2. Hierarchical regression                                         | 1. (Ch. 3.7) <br>2. (Ch. 5.3)                | HW2   |
+| 8      | 3/1 - 3/5   | 1. Interactions in MLR                                                                           | (Ch. 7.1 -7.4)                               | none  |
+| **9**  | 3/8 - 3/12  | 1. Assumptions in MLR: Definitions and testing                                                   | (Ch. 4.1 - 4.5)                              | HW3   |
+| **10** | 3/15 - 3/19 | 1. Categorical IVs: Dummy coding <br>2. Categorial IVs: Effect coding                            | 1. (Ch. 8.1 - 8.2) <br>2. (Ch. 8.3)          | HW4   |
+| 11     | 3/22 - 3/26 | 1. Nonlinear regression                                                                          | 1. (Ch. 6.1 - 6.2)                           | none  |
+| **12** | 3/29 - 4/2  | 1. Logistic regression                                                                           | 1. (Ch. 13.2)                                | MT2   |
+| 13     | 4/5 - 4/9   | 1. Multivariate models, mediation                                                                | none                                         | none  |
+| **14** | 4/12 - 4/14 | *Lecture catch-up*                                                                               | none                                         | HW5   |
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
